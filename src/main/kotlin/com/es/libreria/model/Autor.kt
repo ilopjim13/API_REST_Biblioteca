@@ -1,5 +1,6 @@
 package com.es.libreria.model
 
+import com.fasterxml.jackson.annotation.JsonManagedReference
 import jakarta.persistence.*
 import org.hibernate.annotations.Cascade
 import org.hibernate.annotations.CascadeType
@@ -24,5 +25,6 @@ data class Autor(
     var biografia: String? = null,
 
     @OneToMany(mappedBy = "autor", cascade = [jakarta.persistence.CascadeType.ALL], orphanRemoval = true)
+    @JsonManagedReference
     val libros: MutableList<Libro> = mutableListOf()
 )
