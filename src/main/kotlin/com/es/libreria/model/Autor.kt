@@ -17,8 +17,8 @@ data class Autor(
     var nacionalidad: String,
 
     @Column(name = "anio_nacimiento")
-    @Temporal(TemporalType.DATE)
-    var anioNacimiento: LocalDate,
+//    @Temporal(TemporalType.DATE)
+    var anioNacimiento: Int,
 
     @Column(length = 1000)
     var biografia: String? = null,

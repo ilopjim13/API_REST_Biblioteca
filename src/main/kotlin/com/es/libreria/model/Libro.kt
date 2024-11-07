@@ -16,8 +16,8 @@ data class Libro(
     var genero: String,
 
     @Column(name = "anio_publicacion")
-    @Temporal(TemporalType.DATE)
-    var anioPublicacion: LocalDate,
+    //@Temporal(TemporalType.DATE)
+    var anioPublicacion: Int,
 
     var precio: Double,
 
